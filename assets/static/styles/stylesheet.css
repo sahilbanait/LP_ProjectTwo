@@ -1,5 +1,6 @@
 :root{
-    --transition: 0.2s ease-in
+    --transition: 0.2s ease-in;
+    --font-family: 'Roboto', sans-serif;
 }
 /* Resets */
 * {
@@ -20,7 +21,7 @@ body {
     font-size: medium;
     scroll-behavior: smooth;
     display: block;
-    font-family: "JetBrains Mono", monospace;
+    font-family: "Roboto", sans-serif;
 }
 /* Nav styling */
 nav ul {
@@ -37,6 +38,14 @@ nav ul a{
     text-decoration: none;
     color: black;
 }
+nav ul li:nth-child(odd){
+   text-align: start;
+}
+nav ul li:nth-child(3){
+    text-align: end;
+
+}
+
 nav{
     background-color: #8098bd;
     width: 100%;
@@ -48,19 +57,13 @@ nav{
 #nav-items-container{
         padding: 20px;
 }
-#navItem-one{
-    flex: 2;
+#navItem-one, #navItem-two ,#navItem-three{
+    flex: 3;
 }
-#navItem-two{
-    flex: 2;
-}
-#navItem-three{
-    flex: 2;
-}
+
 nav ul a:hover{
     color: blueviolet;
     transition:  0.2s ease-in-out;
-    font-size: 44px;
 }
 nav ul a:nth-child(1):hover{
 

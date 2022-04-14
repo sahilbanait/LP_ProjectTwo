@@ -9,24 +9,50 @@
      minimum-scale=1.0,
      shrink-to-fit=no" name="viewport">
     <script src="https://kit.fontawesome.com/aca40d7959.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@800&display=swap" rel="stylesheet">
     <link href="assets/static/styles/stylesheet.css" type="text/css" rel="stylesheet">
     <title>Quiz</title>
 </head>
 <body>
-<!-- Nav section -->
+<!-- navbar -->
 <nav>
     <div id="nav-items-container">
         <ul>
-            <li id="navItem-one"><a href="#"><i class="fa-brands fa-android"></i></a></li>
-            <li id="navItem-two"><a href="#"><i class="fa-solid fa-house"></i></a></li>
+            <li id="navItem-one"><a href="index.html"><h3>Quiz</h3></a></li>
+            <li id="navItem-two"><a href="#homepage-section"><i class="fa-solid fa-house"></i></a></li>
             <li id="navItem-three"><a href="#"><i class="fa-solid fa-circle-question"></i></a></li>
         </ul>
     </div>
-</nav>
-<div id="progressBar">
 
-</div>
-<main></main>
+</nav>
+<!-- progress bar -->
+<div id="progressBar"></div>
+<main>
+
+    <!--     homepage section -->
+    <section id="homepage-section">
+        <div id="homepage-container">
+            <div id="homepage-card">
+                <h1>Please enter your name to start the quiz</h1>
+                    <input type="text" id="name-input">
+                <button type="submit" id="name-button">Submit</button>
+            </div>
+        </div>
+    </section>
+
+    <!--     Question section -->
+    <section id="question-section">
+        Questions
+    </section>
+
+    <!--     Options section -->
+    <section id="option-section">
+        Options
+    </section>
+
+</main>
 
 <!-- Footer section -->
 <footer></footer>

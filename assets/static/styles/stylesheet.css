@@ -1,7 +1,14 @@
-:root{
-    --transition: 0.2s ease-in
+:root {
+    --pink-lavender: #cdb4dbff;
+    --orchid-pink: #ffc8ddff;
+    --nadeshiko-pink: #ffafccff;
+    --uranian-blue: #bde0feff;
+    --baby-blue-eyes: rgba(144, 20, 193, 0.95);
+    --transition: 0.2s ease-in;
+    --monospace: 'JetBrains Mono', monospace;
 }
-/* Resets */
+
+/* resets */
 * {
     margin: 0;
     padding: 0;
@@ -20,9 +27,10 @@ body {
     font-size: medium;
     scroll-behavior: smooth;
     display: block;
-    font-family: "JetBrains Mono", monospace;
+    font-family: var(--monospace)
 }
-/* Nav styling */
+
+/* navbar */
 nav ul {
     list-style-type: none;
     display: flex;
@@ -30,43 +38,105 @@ nav ul {
     gap: 1.5rem;
     text-align: center;
     font-size: 40px;
-
-
 }
-nav ul a{
+
+nav ul a {
     text-decoration: none;
     color: black;
 }
-nav{
-    background-color: #8098bd;
+
+nav {
+    background-color: var(--uranian-blue);
     width: 100%;
     position: sticky;
 
+}
 
+nav ul li:nth-child(1) {
+    text-align: start;
+}
 
+nav ul li:nth-child(3) {
+    text-align: end;
 }
-#nav-items-container{
-        padding: 20px;
+
+#nav-items-container {
+    padding: 20px;
 }
-#navItem-one{
+
+#navItem-one, #navItem-two, #navItem-three {
     flex: 2;
 }
-#navItem-two{
-    flex: 2;
-}
-#navItem-three{
-    flex: 2;
-}
-nav ul a:hover{
+
+nav ul a:hover {
     color: blueviolet;
-    transition:  0.2s ease-in-out;
-    font-size: 44px;
-}
-nav ul a:nth-child(1):hover{
+    transition: 0.2s ease-in-out;
 
 }
-#progressBar{
+
+
+/* progressBar */
+#progressBar {
     width: 100%;
     height: 10px;
-    background-color: #7b2eac;
+    background-color: var(--baby-blue-eyes);
 }
+
+
+/* homepage section */
+#homepage-section {
+    padding: 20px;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#homepage-container {
+    display: inline-block;
+    width: 400px;
+    height: 400px;
+    background-color: var(--pink-lavender);
+}
+#homepage-card{
+    height: 100%;
+    padding: 20px;
+    display: inline-flex;
+    align-self: center;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+#name-button {
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+    background-color: var(--uranian-blue) ;
+    font-size: 20px;
+    font-family: "JetBrains Mono ExtraBold", "JetBrains Mono", monospace;
+}
+
+#name-input {
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+    font-size: 20px;
+
+}
+
+
+/* questions sections */
+#question-section {
+    display: none;
+}
+
+/* options section */
+#option-section {
+    display: none;
+}
+
+
+/* footer */

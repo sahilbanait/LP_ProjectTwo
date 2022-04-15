@@ -79,7 +79,7 @@ nav ul li:nth-child(3) {
 }
 
 nav ul a:hover {
-    color: blueviolet;
+    color: var(--blue-green);
     transition: 0.2s ease-in-out;
 
 }

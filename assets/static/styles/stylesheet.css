@@ -3,6 +3,16 @@
     --orchid-pink: #ffc8ddff;
     --nadeshiko-pink: #ffafccff;
     --uranian-blue: #bde0feff;
+    --midnight-blue: #03045eff;
+    --dark-cornflower-blue: #023e8aff;
+    --star-command-blue: #0077b6ff;
+    --blue-green: #0096c7ff;
+    --pacific-blue: #00b4d8ff;
+    --sky-blue-crayola: #48cae4ff;
+    --middle-blue: #90e0efff;
+    --blizzard-blue: #ade8f4ff;
+    --light-cyan: #caf0f8ff;
+
     --baby-blue-eyes: rgba(144, 20, 193, 0.95);
     --transition: 0.2s ease-in;
     --monospace: 'JetBrains Mono', monospace;
@@ -73,13 +83,25 @@ nav ul a:hover {
     transition: 0.2s ease-in-out;
 
 }
+#gradient-separator{
+    height: 10px;
+    background: hsla(280, 95%, 57%, 1);
 
+    background: linear-gradient(90deg, hsla(280, 95%, 57%, 1) 0%, hsla(193, 90%, 55%, 1) 100%);
+
+    background: -moz-linear-gradient(90deg, hsla(280, 95%, 57%, 1) 0%, hsla(193, 90%, 55%, 1) 100%);
+
+    background: -webkit-linear-gradient(90deg, hsla(280, 95%, 57%, 1) 0%, hsla(193, 90%, 55%, 1) 100%);
+
+    margin: 20px;
+
+}
 
 /* progressBar */
 #progressBar {
     width: 100%;
-    height: 10px;
-    background-color: var(--baby-blue-eyes);
+    height: 15px;
+    background-color: var(--blue-green);
 }
 
 
@@ -99,7 +121,8 @@ nav ul a:hover {
     height: 400px;
     background-color: var(--pink-lavender);
 }
-#homepage-card{
+
+#homepage-card {
     height: 100%;
     padding: 20px;
     display: inline-flex;
@@ -114,7 +137,7 @@ nav ul a:hover {
     width: 100%;
     height: 40px;
     margin-top: 20px;
-    background-color: var(--uranian-blue) ;
+    background-color: var(--uranian-blue);
     font-size: 20px;
     font-family: "JetBrains Mono ExtraBold", "JetBrains Mono", monospace;
 }
@@ -127,10 +150,46 @@ nav ul a:hover {
 
 }
 
+#homepage-section {
+    display: none;
+}
 
 /* questions sections */
 #question-section {
-    display: none;
+    text-align: center;
+}
+
+#question-container {
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    color: var(--star-command-blue);
+}
+
+#question-number {
+    font-size: 20px;
+    padding: 15px;
+}
+
+#questions {
+    font-size: 24px;
+    padding: 15px;
+    font-family: "JetBrains Mono ExtraBold", "JetBrains Mono", monospace;
+}
+
+#timer {
+    font-size: 15px;
+    padding: 15px;
+
+}
+
+#question-number, #questions, #timer {
+    flex: 5;
 }
 
 /* options section */

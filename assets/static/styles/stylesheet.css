@@ -85,14 +85,13 @@ nav ul a:hover {
 }
 #gradient-separator{
     height: 10px;
-    background: hsla(280, 95%, 57%, 1);
+    background: hsla(206, 91%, 66%, 1);
 
-    background: linear-gradient(90deg, hsla(280, 95%, 57%, 1) 0%, hsla(193, 90%, 55%, 1) 100%);
+    background: radial-gradient(circle, hsla(206, 91%, 66%, 1) 100%, hsla(190, 90%, 51%, 1) 100%);
 
-    background: -moz-linear-gradient(90deg, hsla(280, 95%, 57%, 1) 0%, hsla(193, 90%, 55%, 1) 100%);
+    background: -moz-radial-gradient(circle, hsla(206, 91%, 66%, 1) 100%, hsla(190, 90%, 51%, 1) 100%);
 
-    background: -webkit-linear-gradient(90deg, hsla(280, 95%, 57%, 1) 0%, hsla(193, 90%, 55%, 1) 100%);
-
+    background: -webkit-radial-gradient(circle, hsla(206, 91%, 66%, 1) 100%, hsla(190, 90%, 51%, 1) 100%);
     margin: 20px;
 
 }
@@ -194,8 +193,12 @@ nav ul a:hover {
 
 /* options section */
 #option-section {
-    display: none;
+       align-content: center;
 }
-
+#optionContainer{
+    width: 400px;
+    height: 400px;
+    background-color: aqua;
+}
 
 /* footer */

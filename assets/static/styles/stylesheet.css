@@ -33,6 +33,9 @@
 html, body {
     overflow-x: hidden;
 }
+:hover{
+    transition: ease-in 0.2s;
+}
 
 body {
     font-size: medium;
@@ -50,7 +53,7 @@ nav ul {
     gap: 1.5rem;
     text-align: center;
 
-    font-size: 40px;
+    font-size: 30px;
 }
 
 nav ul a {
@@ -72,10 +75,11 @@ nav ul li:nth-child(1) {
 
 nav ul li:nth-child(3) {
     text-align: end;
+    margin-right: 10px;
 }
 
 #nav-items-container {
-    padding: 20px;
+    padding: 10px;
 }
 
 #navItem-one, #navItem-two, #navItem-three {
@@ -96,10 +100,18 @@ nav ul a:hover {
 }
 
 /* progressBar */
-#progressBar {
-    width: 100%;
+#progress {
+    width: 0%;
     height: 15px;
     background-color: var(--green-progressBar);
+    animation: move 3s linear;
+     
+
+}
+@keyframes move {
+        to{
+            width: 100%;
+        }
 }
 
 
@@ -139,6 +151,16 @@ nav ul a:hover {
     font-size: 20px;
     font-family: "JetBrains Mono ExtraBold", "JetBrains Mono", monospace;
 }
+#name-button:hover{
+    transition: ease-in 0.2s;
+    background-color: var(--star-command-blue);
+    color: grey;
+    cursor: pointer;
+}
+#error-meesage{
+    display: none;
+    color: darkred;
+}
 
 #name-input {
     width: 100%;
@@ -149,7 +171,7 @@ nav ul a:hover {
 }
 
 #homepage-section {
-    display: none;
+    display: none ;
 }
 
 /* questions sections */
@@ -195,7 +217,7 @@ nav ul a:hover {
 
 /* options section */
 #option-section {
-   padding: 20px;
+   padding: 5px;
     align-items: center;
     display: flex;
     height: 100%;
@@ -207,8 +229,8 @@ nav ul a:hover {
 
 #optionContainer {
     width: 500px;
-    height: 350px;
-    gap: 10px;
+    height: 320px;
+    gap: 6px;
     display: flex;
     flex-flow: column;
 }
@@ -216,13 +238,19 @@ nav ul a:hover {
 #optionA, #optionB, #optionC, #optionD {
 
     flex: 2;
-    border-radius: 15px;
+    border-radius: 10px;
     text-align: center;
-    border: 2px solid gray;
+    border: 1px solid gray;
     display: flex;
     flex-flow: row;
     align-items: center;
     justify-content: center;
+}
+#optionA:hover, #optionB:hover, #optionC:hover, #optionD:hover {
+
+    background-color: var(--dark-cornflower-blue);
+    color: gray;
+    cursor: pointer;
 }
 
 #a, #b, #c, #d {
@@ -274,7 +302,7 @@ footer{
     transition: 0.2s ease-in-out;
 }
 #background{
-    background-image: url("../assets/images/background.jpg");
+    background-image: url("../images/background.jpg");
     min-height: 100vh;
     width: 100vw;
     /* Center and scale the image nicely */

@@ -34,7 +34,9 @@
 
     </nav>
     <!-- progress bar -->
-    <div id="progressBar"></div>
+    <div id="progressBar">
+        <div id="progress"></div>
+    </div>
     <main>
 
         <!--     homepage section -->
@@ -46,43 +48,51 @@
                     <button type="submit" id="name-button">Submit</button>
                 </div>
             </div>
+            <p id="error-meesage">Please enter your name</p>
         </section>
 
-        <!--     Question section -->
-        <section id="question-section">
-            <div id="question-container">
-                <div id="question-number">Question Number <span>6</span><span>/</span><span>23</span></div>
-                <div id="questions">Questions</div>
-                <div id="timer"><b>TIME LEFT</b>: <span>1.50</span></div>
-            </div>
-        </section>
-        <div class="gradient-separator"></div>
+        <div id="content-section">
+            <!--     Question section -->
+            <section id="question-section">
+                <div id="question-container">
+                    <div id="question-number">Question Number:
+                        <span id="current_question">6</span>
+                        <span>/</span>
+                        <span id="questions_total">23</span>
+                    </div>
+                    <div id="questions">Pick the term that relates to polymorphism</div>
+                    <div id="timer"><b>TIME LEFT</b>: <span>1.50</span></div>
+                </div>
+            </section>
+            <div class="gradient-separator"></div>
 
-        <!--     Options section -->
-        <section id="option-section">
-            <div id="optionContainer">
-                <div id="optionA">
-                    <div id="a">A</div>
-                    <!--                 <div class="separator"></div> -->
-                    <div id="answerA">This is the answer</div>
+            <!--     Options section -->
+            <section id="option-section">
+                <div id="optionContainer">
+                    <div id="optionA">
+                        <div id="a">1</div>
+                        <!--                 <div class="separator"></div> -->
+                        <div id="answerA">Dynamic binding</div>
+                    </div>
+                    <div id="optionB">
+                        <div id="b">2</div>
+                        <!--                 <div class="separator"></div> -->
+                        <div id="answerB">Dynamic allocation</div>
+                    </div>
+                    <div id="optionC">
+                        <div id="c">3</div>
+                        <!--                 <div class="separator"></div> -->
+                        <div id="answerC">Static typing</div>
+                    </div>
+                    <div id="optionD">
+                        <div id="d">4</div>
+                        <!--                 <div class="separator"></div> -->
+                        <div id="answerD">Static allocation</div>
+                    </div>
                 </div>
-                <div id="optionB">
-                    <div id="b">B</div>
-                    <!--                 <div class="separator"></div> -->
-                    <div id="answerB">This is the answer</div>
-                </div>
-                <div id="optionC">
-                    <div id="c">C</div>
-                    <!--                 <div class="separator"></div> -->
-                    <div id="answerC">This is the answer</div>
-                </div>
-                <div id="optionD">
-                    <div id="d">D</div>
-                    <!--                 <div class="separator"></div> -->
-                    <div id="answerD">This is the answer</div>
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
+
 
     </main>
 </div>
@@ -105,5 +115,6 @@
 </footer>
 
 <!-- Scripts -->
+<script src="assets/static/scripts/index.js"></script>
 </body>
 </html>

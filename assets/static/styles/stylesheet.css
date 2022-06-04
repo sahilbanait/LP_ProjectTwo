@@ -267,7 +267,7 @@ nav ul a:hover {
 
 }
 
-#answerA, #answerB, #answerC, #answerD {
+.choice-text {
     flex: 5;
 }
 .separator{

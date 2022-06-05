@@ -4,7 +4,7 @@
     --nadeshiko-pink: #ffafccff;
     --uranian-blue: #bde0feff;
     --midnight-blue: #03045eff;
-    --dark-cornflower-blue: #023e8aff;
+    --dark-cornflower-blue: #01648a;
     --star-command-blue: #2272A1;
     --blue-green: #0096c7ff;
     --pacific-blue: #00b4d8ff;
@@ -12,7 +12,7 @@
     --middle-blue: #90e0efff;
     --blizzard-blue: #ade8f4ff;
     --light-cyan: #caf0f8ff;
-    --green-progressBar: #21AEAE;
+    --green-progressBar: #01648a;
     --green-separator: #2BD6AD;
     --baby-blue-eyes: rgba(144, 20, 193, 0.95);
     --transition: 0.2s ease-in;
@@ -23,6 +23,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Nova Square', cursive;
 
 }
 
@@ -31,9 +32,14 @@
 }
 
 html, body {
-    overflow-x: hidden;
+
+    overflow: hidden;
+    width: 100%;
+    justify-content: space-around;
+    box-sizing: border-box;
 }
-:hover{
+
+:hover {
     transition: ease-in 0.2s;
 }
 
@@ -41,7 +47,6 @@ body {
     font-size: medium;
     scroll-behavior: smooth;
     display: block;
-
     font-family: var(--monospace)
 }
 
@@ -52,8 +57,8 @@ nav ul {
     flex-flow: row;
     gap: 1.5rem;
     text-align: center;
-
     font-size: 30px;
+
 }
 
 nav ul a {
@@ -62,7 +67,7 @@ nav ul a {
 }
 
 nav {
-    background-color: var(--uranian-blue);
+    background-color: black;
     width: 100%;
     position: sticky;
 
@@ -71,6 +76,7 @@ nav {
 
 nav ul li:nth-child(1) {
     text-align: start;
+
 }
 
 nav ul li:nth-child(3) {
@@ -87,8 +93,9 @@ nav ul li:nth-child(3) {
 }
 
 nav ul a:hover {
-    color: var(--dark-cornflower-blue);
+    color: var(--uranian-blue);
     transition: 0.2s ease-in-out;
+    transform: scale(1.02);
 
 }
 
@@ -100,19 +107,28 @@ nav ul a:hover {
 }
 
 /* progressBar */
-#progress {
-    width: 0%;
+#progressBar {
+    border: 0.2rem solid var(--green-progressBar);
     height: 15px;
+    border-radius: 50px;
+    width: 100%;
+    overflow: hidden;
+}
+
+#progressFull {
+    width: 0%;
     background-color: var(--green-progressBar);
     animation: move 3s linear;
-     
+    height: 100%;
+    border-radius: 50px;
 
 }
-@keyframes move {
-        to{
-            width: 100%;
-        }
-}
+
+/*@keyframes move {*/
+/*    to {*/
+/*        width: 100%;*/
+/*    }*/
+/*}*/
 
 
 /* homepage section */
@@ -151,13 +167,15 @@ nav ul a:hover {
     font-size: 20px;
     font-family: "JetBrains Mono ExtraBold", "JetBrains Mono", monospace;
 }
-#name-button:hover{
+
+#name-button:hover {
     transition: ease-in 0.2s;
     background-color: var(--star-command-blue);
     color: grey;
     cursor: pointer;
 }
-#error-meesage{
+
+#error-meesage {
     display: none;
     color: darkred;
 }
@@ -171,7 +189,7 @@ nav ul a:hover {
 }
 
 #homepage-section {
-    display: none ;
+    display: none;
 }
 
 /* questions sections */
@@ -199,16 +217,28 @@ nav ul a:hover {
 #questions {
     font-size: 24px;
     padding: 15px;
-    font-family: "JetBrains Mono ExtraBold", "JetBrains Mono", monospace;
+    color: var(--bs-black);
+
 }
 
-#timer  {
+
+#timer {
     font-size: 15px;
-    padding: 15px;
-
 }
-#timer span{
+
+#timer span {
     color: red;
+}
+
+#timeAndScore {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    flex-direction: row;
+    text-align: start;
+    flex-wrap: wrap;
+    padding: 10px;
+
 }
 
 #question-number, #questions, #timer {
@@ -217,11 +247,11 @@ nav ul a:hover {
 
 /* options section */
 #option-section {
-   padding: 5px;
+    padding: 5px;
     align-items: center;
     display: flex;
     height: 100%;
-    color: var(--star-command-blue);
+    color: var(--bs-black);
     width: 100%;
     justify-content: center;
 
@@ -235,9 +265,9 @@ nav ul a:hover {
     flex-flow: column;
 }
 
-#optionA, #optionB, #optionC, #optionD {
-
-    flex: 2;
+.option {
+    flex: 1;
+    color: black;
     border-radius: 10px;
     text-align: center;
     border: 1px solid gray;
@@ -246,15 +276,18 @@ nav ul a:hover {
     align-items: center;
     justify-content: center;
 }
-#optionA:hover, #optionB:hover, #optionC:hover, #optionD:hover {
 
-    background-color: var(--dark-cornflower-blue);
-    color: gray;
+.option:hover {
     cursor: pointer;
+    color: whitesmoke;
+
+    transform: scale(1.02);
+
 }
 
 #a, #b, #c, #d {
     flex: 1;
+    color: black;
     background-color: var(--light-cyan);
     font-size: 20px;
     font-weight: bold;
@@ -270,14 +303,15 @@ nav ul a:hover {
 .choice-text {
     flex: 5;
 }
-.separator{
+
+.separator {
     height: 100%;
     border-left: 2px solid gray;
 
 }
 
 /* footer */
-footer{
+footer {
     padding: 35px;
     background-color: var(--uranian-blue);
     display: flex;
@@ -288,6 +322,7 @@ footer{
     height: 100%;
     flex-direction: column;
 }
+
 #media-container ul {
     list-style-type: none;
     display: flex;
@@ -296,12 +331,14 @@ footer{
     gap: 1.5rem;
     font-size: 30px;
 }
-#media-container ul a:hover{
+
+#media-container ul a:hover {
     font-size: 32px;
     color: var(--dark-cornflower-blue);
     transition: 0.2s ease-in-out;
 }
-#background{
+
+#background {
     background-image: url("../images/background.jpg");
     min-height: 100vh;
     width: 100vw;
@@ -313,5 +350,13 @@ footer{
     /* Needed to position the navbar */
     position: relative;
 
+}
+
+.correct {
+    background-color: rgba(11, 223, 36);
+}
+
+.incorrect {
+    background-color: rgba(230, 29, 29, 1);
 }
 

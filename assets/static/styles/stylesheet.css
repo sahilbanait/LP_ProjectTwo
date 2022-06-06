@@ -154,7 +154,6 @@ nav ul a:hover {
     display: inline-flex;
     align-self: center;
     flex-direction: column;
-
     justify-content: center;
     align-items: center;
 }
@@ -364,7 +363,26 @@ footer {
 }
 
 @media screen and (max-width: 568px)  {
-    body{
+    html,body{
         overflow: scroll;
+        width: 100%;
+        justify-content: space-around;
+        box-sizing: border-box;
     }
+    #media-container ul {
+        list-style-type: none;
+        display: flex;
+        flex-flow: row;
+
+        gap: 1.5rem;
+        font-size: 30px;
+    }
+    ol, ul {
+         padding-left: 0;
+    }
+    #background{
+        min-height: fit-content;
+    }
+
+
 }

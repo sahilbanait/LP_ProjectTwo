@@ -101,14 +101,14 @@ nav ul a:hover {
 
 .gradient-separator {
     height: 7px;
-    background-color: var(--green-separator);
+    background-color: var(--green-progressBar);
     margin: 20px;
 
 }
 
 /* progressBar */
 #progressBar {
-    border: 0.2rem solid var(--green-progressBar);
+    border: 0.2rem solid var(--green-separator);
     height: 15px;
     border-radius: 50px;
     width: 100%;
@@ -117,7 +117,7 @@ nav ul a:hover {
 
 #progressFull {
     width: 0%;
-    background-color: var(--green-progressBar);
+    background-color: var(--green-separator);
     animation: move 3s linear;
     height: 100%;
     border-radius: 50px;
@@ -203,7 +203,7 @@ nav ul a:hover {
     flex-wrap: wrap;
     flex-direction: column;
     align-content: center;
-    padding: 20px;
+    padding: 20px 10px 0 10px;
     justify-content: center;
     align-items: center;
     color: var(--star-command-blue);
@@ -248,7 +248,8 @@ nav ul a:hover {
 
 /* options section */
 #option-section {
-    padding: 5px;
+
+    padding: 10px;
     align-items: center;
     display: flex;
     height: 100%;
@@ -268,7 +269,8 @@ nav ul a:hover {
 
 .option {
     flex: 1;
-    color: black;
+    color: var(--star-command-blue);
+    font-weight: bold;
     border-radius: 10px;
     text-align: center;
     border: 1px solid gray;
@@ -361,3 +363,8 @@ footer {
     background-color: rgba(230, 29, 29, 1);
 }
 
+@media screen and (max-width: 568px)  {
+    body{
+        overflow: scroll;
+    }
+}

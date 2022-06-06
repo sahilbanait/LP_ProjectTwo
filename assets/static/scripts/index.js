@@ -4,7 +4,10 @@ const question = document.querySelector('#questions');
 const currentQuestionNumber = document.querySelector('#current_question');
 const progressBar = document.querySelector('#progressFull');
 const scoretext = document.querySelector('#score');
+let countDownTime = document.querySelector('#timeLeft');
 
+let MAX_TIME = 5
+let timeLeft = MAX_TIME * 60;
 let currentQuestion = {};
 let acceptingAnswer = true;
 let score = 0;
@@ -119,16 +122,14 @@ let quizQuestions = [{
 questionTotal.innerHTML = quizQuestions.length;
 const SCORE_POINTS = 100
 const MAX_QUESTION = 10
-let TIMER = 0
 
 startGame = () => {
     questionCounter = 0;
     score = 0;
-    TIMER = 1.50
     availableQuestion = [...quizQuestions];
     console.log(availableQuestion);
     getNewQuestion();
-    startTimer(TIMER);
+    startTimer();
 }
 
 
@@ -156,8 +157,19 @@ getNewQuestion = () => {
     });
     availableQuestion.splice(questionIndex, 1);
     acceptingAnswer = true;
+    setInterval(startTimer, 1000);
 }
 
+
+startTimer = () => {
+
+    const min = Math.floor(timeLeft / 60);
+    let sec = timeLeft % 60;
+    sec = sec < 10 ? '0' + sec : sec;
+    countDownTime.innerHTML = `${min}:${sec}`;
+    timeLeft--;
+
+}
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
         if (!acceptingAnswer) return;
@@ -186,12 +198,10 @@ choices.forEach(choice => {
 incrementScore = num => {
     score += num
     scoretext.innerText = score
-    let timeLeft = document.querySelector('#timeLeft');
+
 
 }
-startTimer = (num) => {
 
-}
 
 startGame();
 

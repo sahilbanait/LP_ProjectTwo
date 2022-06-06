@@ -157,7 +157,7 @@ getNewQuestion = () => {
     });
     availableQuestion.splice(questionIndex, 1);
     acceptingAnswer = true;
-    let intervalObj =  setInterval(startTimer, 1000);
+    setInterval(startTimer, 1000);
 
 }
 
@@ -205,4 +205,4 @@ incrementScore = num => {
 
 
 startGame();
-clearInterval(intervalObj);
+

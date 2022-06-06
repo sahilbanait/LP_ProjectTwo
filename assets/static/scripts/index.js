@@ -3,7 +3,8 @@ const choices = Array.from(document.querySelectorAll('.choice-text'));
 const question = document.querySelector('#questions');
 const currentQuestionNumber = document.querySelector('#current_question');
 const progressBar = document.querySelector('#progressFull');
-const scoretext = document.querySelector('#score')
+const scoretext = document.querySelector('#score');
+
 let currentQuestion = {};
 let acceptingAnswer = true;
 let score = 0;
@@ -118,15 +119,16 @@ let quizQuestions = [{
 questionTotal.innerHTML = quizQuestions.length;
 const SCORE_POINTS = 100
 const MAX_QUESTION = 10
-let TIMER = 1.50
+let TIMER = 0
 
 startGame = () => {
     questionCounter = 0;
     score = 0;
-
+    TIMER = 1.50
     availableQuestion = [...quizQuestions];
     console.log(availableQuestion);
     getNewQuestion();
+    startTimer(TIMER);
 }
 
 
@@ -184,6 +186,12 @@ choices.forEach(choice => {
 incrementScore = num => {
     score += num
     scoretext.innerText = score
+    let timeLeft = document.querySelector('#timeLeft');
+
 }
+startTimer = (num) => {
+
+}
+
 startGame();
 

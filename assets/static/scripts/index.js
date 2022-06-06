@@ -159,12 +159,15 @@ getNewQuestion = () => {
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
         if (!acceptingAnswer) return;
-
         acceptingAnswer = false;
 
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset['number'];
-        const applyClass = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
+        let applyClass = 'incorrect';
+        if (selectedAnswer == currentQuestion.answer) {
+            applyClass = 'correct'
+
+        }
         if (applyClass === 'correct') {
             incrementScore(SCORE_POINTS)
         }

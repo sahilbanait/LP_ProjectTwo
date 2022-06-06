@@ -216,6 +216,7 @@ nav ul a:hover {
 
 #questions {
     font-size: 24px;
+    font-weight: bold;
     padding: 15px;
     color: var(--bs-black);
 

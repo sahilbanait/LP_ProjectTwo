@@ -364,7 +364,6 @@ footer {
 
 @media screen and (max-width: 568px) {
     html, body {
-        overflow: scroll;
         width: 100%;
         justify-content: space-around;
         box-sizing: border-box;
@@ -382,15 +381,21 @@ footer {
         padding-left: 0;
     }
 
-    #background {
-        min-height: fit-content;
-    }
-
     #timeAndScore {
         font-size: 10px;
     }
-    footer{
-        position: sticky;
+
+    .background {
+        background-image: url("../images/background.jpg");
+        width: 100vw;
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        /* Needed to position the navbar */
+        position: relative;
+
     }
 
 }

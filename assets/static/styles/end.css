@@ -92,7 +92,7 @@ nav h1 {
     align-content: center;
     justify-content: center;
 }
-#retry-quiz-btn {
+.retry-quiz-btn {
     color: black;
     background-color: #2BD6AD;
     height:fit-content;
@@ -118,25 +118,5 @@ ol, ul {
 }
 
 
-footer {
-    padding: 35px;
-    background-color: var(--uranian-blue);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    color: var(--star-command-blue);
-    height: 100%;
-    flex-direction: column;
-    position: sticky;
-}
 
-@media screen and (max-width: 568px) {
-    html, body {
-        overflow: scroll;
-        width: 100%;
-        justify-content: space-around;
-        box-sizing: border-box;
-    }
 
-}

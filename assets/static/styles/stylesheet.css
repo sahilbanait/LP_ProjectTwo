@@ -48,6 +48,12 @@ body {
     font-family: var(--monospace)
 }
 
+.btn-disabled[disabled] {
+    opacity: .4;
+    cursor: default !important;
+    pointer-events: none;
+}
+
 /* navbar */
 nav ul {
     list-style-type: none;

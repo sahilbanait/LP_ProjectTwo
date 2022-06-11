@@ -6,7 +6,7 @@
     <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
           integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" rel="stylesheet">
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/aca40d7959.js"></script>
-    <link href="https://use.typekit.net/dxw4jre.css" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@800&display=swap" rel="stylesheet">
@@ -16,47 +16,54 @@
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
 </head>
 <body>
-<div id="end-nav-container">
-    <nav>
-        <h1>
-            Thank you for completing the quiz
-        </h1>
+
+<div class="background">
+
+    <!-- navbar -->
+    <nav role="navigation">
+        <div id="nav-items-container">
+            <ul>
+                <li id="navItem-one"><a href="index.html"><h1>Quiz</h1></a></li>
+                <li id="navItem-two"><a href="#homepage-section"><i class="fa-solid fa-house"></i></a></li>
+                <li id="navItem-three"><a href="#"><i class="fa-solid fa-circle-question"></i></a></li>
+            </ul>
+        </div>
+
     </nav>
-</div>
-<main>
-    <section id="score-section">
-        <div>
-            <div id="score-text">
-                Your Score is:
-            </div>
-            <div id="score-container">
-                <div id="score"><b>100</b></div>
-            </div>
-            <div id="retry-btn-container">
-                <div>
-                    <ul>
-                        <li><a href="" id="retry-quiz-btn">Take Quiz Again</a></li>
-                    </ul>
+
+    <main>
+        <section id="score-section">
+            <div id="score-wrapper">
+                <div id="score-text">
+                    <h1>Score is:</h1>
+                </div>
+                <div id="score-container">
+                    <div id="score"><b>100</b></div>
+                </div>
+                <div id="button-container">
+                    <a href="homepage.html" id="retry-quiz-btn">Retry Quiz</a>
                 </div>
 
-            </div>
-        </div>
-    </section>
-</main>
-<!-- Footer section -->
-<footer>
-    <div>
-        <h1>Sahil Kumar</h1>
-    </div>
-    <div id="media-container">
-        <ul>
-            <li><a><i class="fa-brands fa-github"></i></a></li>
-            <li><a><i class="fa-brands fa-linkedin"></i></a></li>
-            <li><a><i class="fa-brands fa-instagram"></i></a></li>
-        </ul>
-    </div>
 
-</footer>
-<script src="assets/static/scripts/index.js"></script>
+
+            </div>
+        </section>
+    </main>
+    <!-- Footer section -->
+    <footer>
+        <div>
+            <h1>Sahil Kumar</h1>
+        </div>
+        <div id="media-container">
+            <ul>
+                <li><a><i class="fa-brands fa-github"></i></a></li>
+                <li><a><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a><i class="fa-brands fa-instagram"></i></a></li>
+            </ul>
+        </div>
+
+    </footer>
+    <script src="assets/static/scripts/index.js"></script>
+</div>
 </body>
 </html>

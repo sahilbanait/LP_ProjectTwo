@@ -6,8 +6,6 @@
 }
 
 html, body {
-
-    overflow: hidden;
     width: 100%;
     justify-content: space-around;
     box-sizing: border-box;
@@ -54,17 +52,12 @@ nav h1 {
     list-style-type: none;
 
 }
-
-#score-section {
-
-}
-
 #score-container {
     height: 150px;
     display: flex;
     width: 150px;
     align-self: center;
-    padding: 10px;
+    padding: 20px;
     background-color: var(--uranian-blue);
     border-radius: 180px;
     animation: heroImage 5s infinite;
@@ -77,21 +70,44 @@ nav h1 {
 
 #score-text {
     font-size: 20px;
+    padding: 20px;
+}
+#score-wrapper{
+    display: inline-flex;
+    width: 100%;
+    text-align: center;
+    gap: 3rem;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: stretch;
+}
+#button-container{
+    height: 70px;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+#retry-quiz-btn {
+    color: black;
+    background-color: #2BD6AD;
+    height:fit-content;
     padding: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 10px;
+
+
 }
 
-#retry-btn-container {
-    text-align: center;
-    margin-top: 40px;
-    height: 50px;
-    width: 100%;
-    display: inline-flex;
-    background-color: #2BD6AD;
-    flex-direction: row;
-    align-content: space-around;
-    align-items: center;
-    justify-content: space-around;
-    border-radius: 5px;
+#retry-quiz-btn:hover{
+    transform: scale(1.02);
+    color: white;
+
 }
 
 #retry-btn-container
@@ -101,20 +117,18 @@ ol, ul {
 
 }
 
-#retry-quiz-btn {
-    width: 100%;
-    height: 40px;
-    margin-top: 20px;
-    background-color: var(--uranian-blue);
-    font-size: 20px;
-    font-family: "JetBrains Mono ExtraBold", "JetBrains Mono", monospace;
-}
 
-#retry-quiz-btn:hover {
-    transition: ease-in 0.2s;
-    background-color: var(--star-command-blue);
-    color: grey;
-    cursor: pointer;
+footer {
+    padding: 35px;
+    background-color: var(--uranian-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: var(--star-command-blue);
+    height: 100%;
+    flex-direction: column;
+    position: sticky;
 }
 
 @media screen and (max-width: 568px) {

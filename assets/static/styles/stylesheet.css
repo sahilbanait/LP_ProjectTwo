@@ -32,8 +32,6 @@
 }
 
 html, body {
-
-
     width: 100%;
     justify-content: space-around;
     box-sizing: border-box;
@@ -282,7 +280,6 @@ nav ul a:hover {
 .option:hover {
     cursor: pointer;
     color: whitesmoke;
-
     transform: scale(1.02);
 
 }
@@ -318,12 +315,13 @@ footer {
     background-color: var(--uranian-blue);
     display: flex;
     justify-content: center;
+
     align-items: center;
     width: 100%;
     color: var(--star-command-blue);
     height: 100%;
     flex-direction: column;
-    position: sticky;
+
 }
 
 #media-container ul {
@@ -339,6 +337,7 @@ footer {
     font-size: 32px;
     color: var(--dark-cornflower-blue);
     transition: 0.2s ease-in-out;
+    cursor: pointer;
 }
 
 .background {
@@ -375,7 +374,6 @@ footer {
         list-style-type: none;
         display: flex;
         flex-flow: row;
-
         gap: 1.5rem;
         font-size: 30px;
     }
@@ -390,6 +388,9 @@ footer {
 
     #timeAndScore {
         font-size: 10px;
+    }
+    footer{
+        position: sticky;
     }
 
 }

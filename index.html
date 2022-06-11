@@ -25,7 +25,7 @@
     <title>Quiz</title>
 </head>
 <body>
-<div id="background">
+<div class="background">
 
     <!-- navbar -->
     <nav role="navigation">
@@ -38,73 +38,23 @@
         </div>
 
     </nav>
-    <!-- progress bar -->
-    <div id="progressBar">
-        <div id="progressFull"></div>
-    </div>
-    <main>
 
-        <!--     homepage section -->
-        <section id="homepage-section">
-            <div id="homepage-container">
-                <div id="homepage-card">
-                    <h1>Please enter your name to start the quiz</h1>
+    <!--     homepage section -->
+    <section id="homepage-section">
+        <div id="homepage-container">
+            <div id="homepage-card">
+                <h1>Enter your name to start the quiz</h1>
+                <form>
                     <input type="text" id="name-input">
-                    <button type="submit" id="name-button">Submit</button>
-                </div>
+                </form>
+                <a href="homepage.html" id="name-button" onclick="run()" type="submit">Submit</a>
+                <p id="error-meesage">Please enter your name</p>
             </div>
-            <p id="error-meesage">Please enter your name</p>
-        </section>
-
-        <!--     Question section -->
-        <div id="content-section">
-
-            <section id="question-section">
-                <div id="question-container">
-                    <div id="question-number">Question Number:
-                        <span id="current_question"></span>
-                        <span>/</span>
-                        <span id="questions_total">23</span>
-                    </div>
-                    <div id="questions">Pick the term that relates to polymorphism</div>
-                    <div id="timeAndScore">
-                        <div id="timer"><h4><b>TIME LEFT- </b> <span id="timeLeft">1:50</span></h4></div>
-                        <div id="score-text"><h4><b>SCORE: </b> <span id="score">0</span></h4></div>
-                    </div>
-
-                </div>
-            </section>
-            <div class="gradient-separator"></div>
-
-            <!--     Options section -->
-            <section id="option-section">
-                <div id="optionContainer">
-                    <div class="option">
-                        <div id="a">1</div>
-                        <!--                 <div class="separator"></div> -->
-                        <div class="choice-text" data-number="1">Dynamic binding</div>
-                    </div>
-                    <div class="option">
-                        <div id="b">2</div>
-                        <!--                 <div class="separator"></div> -->
-                        <div class="choice-text" data-number="2">Dynamic allocation</div>
-                    </div>
-                    <div class="option">
-                        <div id="c">3</div>
-                        <!--                 <div class="separator"></div> -->
-                        <div class="choice-text" data-number="3">Static typing</div>
-                    </div>
-                    <div class="option">
-                        <div id="d">4</div>
-                        <!--                 <div class="separator"></div> -->
-                        <div class="choice-text" data-number="4">Static allocation</div>
-                    </div>
-                </div>
-            </section>
         </div>
 
+    </section>
 
-    </main>
+
 </div>
 
 

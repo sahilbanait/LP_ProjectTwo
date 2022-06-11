@@ -6,6 +6,10 @@ const progressBar = document.querySelector('#progressFull');
 const scoretext = document.querySelector('#score');
 let countDownTime = document.querySelector('#timeLeft');
 
+const mainSection = document.querySelector('main');
+const homePageSection = document.querySelector('#homepage-section');
+const submitBtn = document.querySelector('#name-button');
+let errMsg = document.querySelector('#error-meesage');
 
 let currentQuestion = {};
 let acceptingAnswer = true;
@@ -116,12 +120,12 @@ let quizQuestions = [
     },
 
 ]
+
 questionTotal.innerHTML = quizQuestions.length;
 const SCORE_POINTS = 100
 const MAX_QUESTION = 10
 let MAX_TIME = 5
 let timeLeft = MAX_TIME * 60;
-
 
 let startTimer = () => {
     const min = Math.floor(timeLeft / 60);
@@ -134,6 +138,7 @@ let startTimer = () => {
 }
 
 startGame = () => {
+
     startTimer();
     questionCounter = 0;
     score = 0;
@@ -151,6 +156,7 @@ populateNewQuestion = () => {
     }
     questionCounter++;
     currentQuestionNumber.innerText = questionCounter
+
     let progressBarPercentage = questionCounter / MAX_QUESTION * 100;
     progressBar.style.width = `${progressBarPercentage}%`
 

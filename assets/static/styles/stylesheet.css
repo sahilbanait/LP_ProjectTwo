@@ -33,7 +33,7 @@
 
 html, body {
 
-    overflow: hidden;
+
     width: 100%;
     justify-content: space-around;
     box-sizing: border-box;
@@ -135,7 +135,7 @@ nav ul a:hover {
 #homepage-section {
     padding: 20px;
     text-align: center;
-    margin: 0 auto;
+    margin: 20px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -143,9 +143,10 @@ nav ul a:hover {
 
 #homepage-container {
     display: inline-block;
-    width: 400px;
+    width: 100%;
     height: 400px;
-    background-color: var(--pink-lavender);
+    border-radius: 10px;
+    background-color: var(--pacific-blue);
 }
 
 #homepage-card {
@@ -159,9 +160,10 @@ nav ul a:hover {
 }
 
 #name-button {
-    width: 100%;
+    width: 80px;
     height: 40px;
     margin-top: 20px;
+    color: black;
     background-color: var(--uranian-blue);
     font-size: 20px;
     font-family: "JetBrains Mono ExtraBold", "JetBrains Mono", monospace;
@@ -170,12 +172,13 @@ nav ul a:hover {
 #name-button:hover {
     transition: ease-in 0.2s;
     background-color: var(--star-command-blue);
-    color: grey;
+    color: white;
     cursor: pointer;
 }
 
 #error-meesage {
     display: none;
+    margin-top: 10px;
     color: darkred;
 }
 
@@ -187,9 +190,7 @@ nav ul a:hover {
 
 }
 
-#homepage-section {
-    display: none;
-}
+
 
 /* questions sections */
 #question-section {
@@ -247,7 +248,6 @@ nav ul a:hover {
 
 /* options section */
 #option-section {
-
     padding: 10px;
     align-items: center;
     display: flex;
@@ -323,7 +323,7 @@ footer {
     color: var(--star-command-blue);
     height: 100%;
     flex-direction: column;
-
+    position: sticky;
 }
 
 #media-container ul {
@@ -341,7 +341,7 @@ footer {
     transition: 0.2s ease-in-out;
 }
 
-#background {
+.background {
     background-image: url("../images/background.jpg");
     min-height: 100vh;
     width: 100vw;
@@ -363,13 +363,14 @@ footer {
     background-color: rgba(230, 29, 29, 1);
 }
 
-@media screen and (max-width: 568px)  {
-    html,body{
+@media screen and (max-width: 568px) {
+    html, body {
         overflow: scroll;
         width: 100%;
         justify-content: space-around;
         box-sizing: border-box;
     }
+
     #media-container ul {
         list-style-type: none;
         display: flex;
@@ -378,14 +379,17 @@ footer {
         gap: 1.5rem;
         font-size: 30px;
     }
+
     ol, ul {
-         padding-left: 0;
+        padding-left: 0;
     }
-    #background{
+
+    #background {
         min-height: fit-content;
     }
 
-    #timeAndScore{
+    #timeAndScore {
         font-size: 10px;
     }
+
 }

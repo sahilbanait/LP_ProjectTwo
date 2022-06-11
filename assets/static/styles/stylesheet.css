@@ -162,13 +162,13 @@ nav ul a:hover {
 }
 
 #name-button {
-    width: 80px;
-    height: 40px;
-    margin-top: 20px;
     color: black;
-    background-color: var(--uranian-blue);
+    background-color: #2BD6AD;
+    height: fit-content;
+    padding: 10px;
+    text-decoration: none;
     font-size: 20px;
-    font-family: "JetBrains Mono ExtraBold", "JetBrains Mono", monospace;
+    border-radius: 10px;
 }
 
 #name-button:hover {
@@ -370,7 +370,7 @@ nav ul a:hover {
     align-items: stretch;
 }
 
-#button-container {
+.button-container {
     height: 70px;
     text-align: center;
     padding: 20px;
@@ -381,7 +381,7 @@ nav ul a:hover {
     justify-content: center;
 }
 
-.retry-quiz-btn {
+#retry-quiz-btn {
     color: black;
     background-color: #2BD6AD;
     height: fit-content;

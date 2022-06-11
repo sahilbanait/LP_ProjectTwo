@@ -185,9 +185,9 @@ choices.forEach(choice => {
 
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset['number'];
-        let applyClass = 'incorrect';
+        let applyClass = '.76incorrect';
         if (selectedAnswer == currentQuestion.answer) {
-            applyClass = 'correct'
+            applyClass = '.correct'
 
         }
         if (applyClass === 'correct') {

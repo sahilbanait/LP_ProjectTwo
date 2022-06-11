@@ -56,6 +56,10 @@ nav ul {
     gap: 1.5rem;
     text-align: center;
     font-size: 30px;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    justify-content: space-evenly;
+    align-items: center;
 
 }
 

@@ -5,7 +5,8 @@ const currentQuestionNumber = document.querySelector('#current_question');
 const progressBar = document.querySelector('#progressFull');
 const scoretext = document.querySelector('#score');
 let countDownTime = document.querySelector('#timeLeft');
-
+let scoreInt = document.querySelector('#score-int');
+let option = document.getElementsByClassName('option')
 const mainSection = document.querySelector('main');
 const homePageSection = document.querySelector('#homepage-section');
 const submitBtn = document.querySelector('#name-button');
@@ -185,15 +186,16 @@ choices.forEach(choice => {
 
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset['number'];
-        let applyClass = '.76incorrect';
+        let applyClass = 'Incorrect'
         if (selectedAnswer == currentQuestion.answer) {
-            applyClass = '.correct'
+            applyClass = 'Correct'
 
         }
-        if (applyClass === 'correct') {
+        if (applyClass === 'Correct') {
             incrementScore(SCORE_POINTS)
         }
         selectedChoice.parentElement.classList.add(applyClass);
+
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(applyClass);
             populateNewQuestion();
@@ -206,6 +208,7 @@ choices.forEach(choice => {
 incrementScore = num => {
     score += num
     scoretext.innerText = score
+
 }
 
 startGame();

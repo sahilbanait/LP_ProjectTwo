@@ -243,10 +243,11 @@ nav ul a:hover {
     display: flex;
     flex: 1;
     width: 100%;
-    flex-direction: row;
     text-align: start;
     flex-wrap: wrap;
     padding: 10px;
+    flex-direction: row;
+    align-items: center;
 
 }
 
@@ -282,6 +283,7 @@ nav ul a:hover {
     text-align: center;
     border: 1px solid gray;
     display: flex;
+    background-color: var(--uranian-blue);
     flex-flow: row;
     align-items: center;
     justify-content: center;

@@ -147,6 +147,7 @@ populateNewQuestion = () => {
     if (availableQuestion.length === 0 || questionCounter > MAX_QUESTION) {
         localStorage.setItem('mostRecentScore', score)
         return window.location.assign('end.html')
+
     }
     questionCounter++;
     currentQuestionNumber.innerText = questionCounter

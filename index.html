@@ -42,12 +42,13 @@
         <div id="homepage-container">
             <div id="homepage-card">
                 <h1>Enter your name to start the quiz</h1>
-                <form>
+                <form id="submitForm">
                     <input type="text" id="name-input">
+                    <div class="button-container">
+                        <button href="#" id="name-button">Submit</button>
+                    </div>
                 </form>
-                <div class="button-container">
-                    <a href="quiz.html" id="name-button" onclick="run()" type="submit">Submit</a>
-                </div>
+
 
                 <p id="error-meesage">Please enter your name</p>
             </div>

@@ -11,7 +11,14 @@ const mainSection = document.querySelector('main');
 const homePageSection = document.querySelector('#homepage-section');
 const submitBtn = document.querySelector('#name-button');
 let errMsg = document.querySelector('#error-meesage');
+const submitForm = document.querySelector('#submitForm');
 
+
+submitForm.addEventListener('submit', (evt) => {
+    evt.preventDefault();
+    const value = submitForm.elements.query.value
+    console.log(value)
+})
 let currentQuestion = {};
 let acceptingAnswer = true;
 let score = 0;
@@ -205,11 +212,16 @@ choices.forEach(choice => {
     })
 })
 
-incrementScore = num => {
+incrementScore = (num) => {
     score += num
     scoretext.innerText = score
-
+    return score
 }
-
 startGame();
+
+
+
+
+
+
 

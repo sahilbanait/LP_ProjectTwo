@@ -474,6 +474,11 @@ footer {
     font-size: 20px;
 }
 
+#score-msg {
+    padding: 20px;
+    font-size: 20px;
+}
+
 @media screen and (max-width: 568px) {
     html, body {
         overflow: scroll;

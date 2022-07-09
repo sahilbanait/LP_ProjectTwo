@@ -16,6 +16,7 @@ const submitForm = document.querySelector('#submitForm');
 
 const validationForm = () => {
     const name = document.forms['submitForm']['uname'].value;
+    localStorage.setItem('name', name);
     submitForm.addEventListener('submit', (evt) => {
         evt.preventDefault();
         if (name === '') {

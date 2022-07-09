@@ -38,19 +38,17 @@
     </nav>
 
     <!--     homepage section -->
-    <section id="homepage-section">
-        <div id="homepage-container">
-            <div id="homepage-card">
+    <section id="game-section">
+        <div id="game-container">
+            <div id="game-card">
                 <h1>Enter your name to start the quiz</h1>
                 <form id="submitForm">
-                    <input type="text" id="name-input">
+                    <input id="name-input" name="uname" required type="text">
                     <div class="button-container">
-                        <button href="#" id="name-button">Submit</button>
+                        <input href="#" id="name-button" onclick="return validationForm()" type="submit"></input>
                     </div>
                 </form>
-
-
-                <p id="error-meesage">Please enter your name</p>
+                <p id="error-meesage"></p>
             </div>
         </div>
 

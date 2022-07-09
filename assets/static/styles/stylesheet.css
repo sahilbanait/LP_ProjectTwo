@@ -141,7 +141,7 @@ nav ul a:hover {
 
 
 /* homepage section */
-#homepage-section {
+#game-section {
     padding: 20px;
     text-align: center;
     margin: 20px 20px;
@@ -150,7 +150,7 @@ nav ul a:hover {
     align-items: center;
 }
 
-#homepage-container {
+#game-container {
     display: inline-block;
     width: 100%;
     height: 400px;
@@ -158,7 +158,7 @@ nav ul a:hover {
     background-color: var(--pacific-blue);
 }
 
-#homepage-card {
+#game-card {
     height: 100%;
     padding: 20px;
     display: inline-flex;
@@ -384,6 +384,7 @@ nav ul a:hover {
     text-align: center;
     padding: 20px;
     display: flex;
+    margin: 10px;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
@@ -421,12 +422,12 @@ footer {
     background-color: var(--uranian-blue);
     display: flex;
     justify-content: center;
-
     align-items: center;
     width: 100%;
     color: var(--star-command-blue);
     height: 100%;
     flex-direction: column;
+    position: sticky;
 
 }
 
@@ -450,12 +451,9 @@ footer {
     background-image: url("../images/background.jpg");
     min-height: 100vh;
     width: 100vw;
-    /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
-    /* Needed to position the navbar */
     position: relative;
 
 }
@@ -466,6 +464,15 @@ footer {
 
 .incorrect {
     background-color: rgba(230, 29, 29, 1);
+}
+
+/*
+    End page style
+
+*/
+
+#score-int {
+    font-size: 20px;
 }
 
 @media screen and (max-width: 568px) {

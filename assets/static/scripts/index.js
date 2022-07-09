@@ -8,17 +8,26 @@ let countDownTime = document.querySelector('#timeLeft');
 let scoreInt = document.querySelector('#score-int');
 let option = document.getElementsByClassName('option')
 const mainSection = document.querySelector('main');
-const homePageSection = document.querySelector('#homepage-section');
+const homePageSection = document.querySelector('#game-section');
 const submitBtn = document.querySelector('#name-button');
 let errMsg = document.querySelector('#error-meesage');
 const submitForm = document.querySelector('#submitForm');
 
 
-submitForm.addEventListener('submit', (evt) => {
-    evt.preventDefault();
-    const value = submitForm.elements.query.value
-    console.log(value)
-})
+const validationForm = () => {
+    const name = document.forms['submitForm']['uname'].value;
+    submitForm.addEventListener('submit', (evt) => {
+        evt.preventDefault();
+        if (name === '') {
+            return false
+        } else {
+            window.location.assign('quiz.html');
+            return true
+        }
+    })
+    console.log(name)
+}
+
 let currentQuestion = {};
 let acceptingAnswer = true;
 let score = 0;
@@ -190,13 +199,11 @@ choices.forEach(choice => {
     choice.addEventListener('click', e => {
         if (!acceptingAnswer) return;
         acceptingAnswer = false;
-
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset['number'];
         let applyClass = 'Incorrect'
         if (selectedAnswer == currentQuestion.answer) {
             applyClass = 'Correct'
-
         }
         if (applyClass === 'Correct') {
             incrementScore(SCORE_POINTS)
@@ -217,6 +224,7 @@ incrementScore = (num) => {
     scoretext.innerText = score
     return score
 }
+
 startGame();
 
 

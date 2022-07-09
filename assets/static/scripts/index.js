@@ -222,6 +222,7 @@ choices.forEach(choice => {
 incrementScore = (num) => {
     score += num
     scoretext.innerText = score
+    localStorage.setItem('score', score);
     return score
 }
 

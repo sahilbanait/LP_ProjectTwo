@@ -200,7 +200,6 @@ nav ul a:hover {
 }
 
 
-
 /* questions sections */
 #question-section {
     text-align: center;
@@ -497,6 +496,11 @@ footer {
 
     #timeAndScore {
         font-size: 10px;
+    }
+
+    .option:hover {
+        cursor: pointer;
+        color: var(--star-command-blue);
     }
 
 

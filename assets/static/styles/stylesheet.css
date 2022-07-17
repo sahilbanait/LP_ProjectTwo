@@ -233,6 +233,19 @@ nav ul a:hover {
 
 #timer {
     font-size: 15px;
+    flex: 2;
+}
+
+#pause-timer {
+    flex: 2;
+    font-size: 30px;
+    text-align: center;
+}
+
+#score-text {
+    flex: 2;
+    float: end;
+    text-align: end;
 }
 
 #timer span {
@@ -243,6 +256,8 @@ nav ul a:hover {
     display: flex;
     flex: 1;
     width: 100%;
+    gap: 1.5rem;
+    justify-content: space-evenly;
     text-align: start;
     flex-wrap: wrap;
     padding: 10px;
@@ -251,7 +266,7 @@ nav ul a:hover {
 
 }
 
-#question-number, #questions, #timer {
+#question-number, #questions {
     flex: 5;
 }
 
@@ -435,13 +450,18 @@ footer {
     display: flex;
     flex-flow: row;
     margin-top: 20px;
+
     gap: 1.5rem;
     font-size: 30px;
 }
 
+#media-container ul a {
+    color: var(--star-command-blue);
+}
+
 #media-container ul a:hover {
     font-size: 32px;
-    color: var(--dark-cornflower-blue);
+    color: var(--green-progressBar);
     transition: 0.2s ease-in-out;
     cursor: pointer;
 }

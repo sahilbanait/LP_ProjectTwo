@@ -29,6 +29,12 @@ const validationForm = () => {
     console.log(name)
 }
 
+const showInstructionDialog = () => {
+
+
+}
+
+
 let currentQuestion = {};
 let acceptingAnswer = true;
 let score = 0;

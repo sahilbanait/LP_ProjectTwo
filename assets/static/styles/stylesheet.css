@@ -148,12 +148,13 @@ nav ul a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 #game-container {
     display: inline-block;
     width: 100%;
-    height: 400px;
+    height: 600px;
     border-radius: 10px;
     background-color: var(--pacific-blue);
 }
@@ -199,6 +200,33 @@ nav ul a:hover {
 
 }
 
+#instructions-container {
+    text-align: start;
+    margin-top: 20px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 20px;
+
+
+}
+
+#instructions-container ul li {
+    list-style-type: none;
+    padding: 10px;
+    font-size: 20px;
+}
+
+#instructions-container ul li::before {
+    list-style-type: circle;
+    color: var(--green-progressBar);
+
+    font-weight: bolder;
+    margin-left: -1em;
+    content: "\25AA";
+    width: 1em;
+    display: inline-block;
+
+}
 
 /* questions sections */
 #question-section {

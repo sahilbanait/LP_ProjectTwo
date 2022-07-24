@@ -31,6 +31,10 @@
         </div>
 
     </nav>
+    <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong>Timeout !</strong> Please try again.
+    </div>
 
 
     <!-- progress bar -->
@@ -51,9 +55,10 @@
                 <div id="timeAndScore">
                     <div id="timer"><h4><b>TIME LEFT: </b> <span id="timeLeft">1:50</span></h4></div>
                     <div id="pause-timer">
-                        <button id="name-button"><i class="fa-solid fa-circle-pause"></i></button>
+                        <button id="name-button" onclick="pauseTimer()"><i class="fa-solid fa-circle-pause"></i>
+                        </button>
                     </div>
-                    <div id="score-text"><h4><b>SCORE: </b> <span id="score">0</span></h4></div>
+                    <div id="score-txt-quiz"><h4><b>SCORE: </b> <span id="score">0</span></h4></div>
                 </div>
 
             </div>

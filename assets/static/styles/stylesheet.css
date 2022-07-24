@@ -115,6 +115,28 @@ nav ul a:hover {
 
 }
 
+.alert {
+    display: none;
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
 /* progressBar */
 #progressBar {
     border: 0.2rem solid var(--green-separator);
@@ -270,6 +292,10 @@ nav ul a:hover {
     text-align: center;
 }
 
+#pause-timer:hover {
+    content: "Pause";
+}
+
 #score-text {
     float: end;
     text-align: end;
@@ -402,6 +428,13 @@ nav ul a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
+}
+
+#score-txt-quiz {
+    flex: 2;
+    font-size: 20px;
+    padding: 20px;
+    text-align: end;
 }
 
 #score-text {

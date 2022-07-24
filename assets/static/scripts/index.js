@@ -12,6 +12,7 @@ const homePageSection = document.querySelector('#game-section');
 const submitBtn = document.querySelector('#name-button');
 let errMsg = document.querySelector('#error-meesage');
 const submitForm = document.querySelector('#submitForm');
+const alert = document.querySelector('.alert')
 
 
 const validationForm = () => {
@@ -29,18 +30,12 @@ const validationForm = () => {
     console.log(name)
 }
 
-const showInstructionDialog = () => {
-
-
-}
-
-
 let currentQuestion = {};
 let acceptingAnswer = true;
 let score = 0;
 let questionCounter = 0;
 let availableQuestion = [];
-let pauseTimer = false
+let isPaused = false
 
 let quizQuestions = [
     {
@@ -158,12 +153,16 @@ let startTimer = () => {
     sec = sec < 10 ? '0' + sec : sec;
     countDownTime.innerHTML = `${min}:${sec}`;
     console.log(`${min}:${sec}`)
-    timeLeft--;
+    if (!isPaused) {
+        timeLeft--;
+    }
+}
 
+const pauseTimer = () => {
+    isPaused = !isPaused
 }
 
 startGame = () => {
-
     startTimer();
     questionCounter = 0;
     score = 0;
@@ -171,6 +170,7 @@ startGame = () => {
     console.log(availableQuestion);
     populateNewQuestion();
     setInterval(startTimer, 1000);
+
 }
 populateNewQuestion = () => {
 
@@ -193,13 +193,9 @@ populateNewQuestion = () => {
     choices.forEach(choice => {
         const number = choice.dataset['number'];
         choice.innerText = currentQuestion["choice" + number];
-
-
     });
     availableQuestion.splice(questionIndex, 1);
     acceptingAnswer = true;
-
-
 }
 
 
@@ -209,7 +205,9 @@ choices.forEach(choice => {
         acceptingAnswer = false;
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset['number'];
+        console.log(selectedAnswer)
         let applyClass = 'Incorrect'
+
         if (selectedAnswer == currentQuestion.answer) {
             applyClass = 'Correct'
         }
@@ -218,9 +216,11 @@ choices.forEach(choice => {
         }
         selectedChoice.parentElement.classList.add(applyClass);
 
+
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(applyClass);
             populateNewQuestion();
+
         })
 
 
@@ -233,6 +233,13 @@ incrementScore = (num) => {
     localStorage.setItem('score', score);
     return score
 }
+setTimeout(() => {
+    alert.style.display = 'Block'
+    isPaused = true
+}, 50000)
+setTimeout(() => {
+    window.location.assign('index.html')
+}, 55000)
 
 startGame();
 

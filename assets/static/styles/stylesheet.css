@@ -271,7 +271,6 @@ nav ul a:hover {
 }
 
 #score-text {
-    flex: 2;
     float: end;
     text-align: end;
 }

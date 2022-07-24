@@ -155,6 +155,13 @@ let startTimer = () => {
     console.log(`${min}:${sec}`)
     if (!isPaused) {
         timeLeft--;
+        setTimeout(() => {
+            alert.style.display = 'Block'
+            isPaused = true
+        }, 50000)
+        setTimeout(() => {
+            window.location.assign('index.html')
+        }, 55000)
     }
 }
 
@@ -233,13 +240,7 @@ incrementScore = (num) => {
     localStorage.setItem('score', score);
     return score
 }
-setTimeout(() => {
-    alert.style.display = 'Block'
-    isPaused = true
-}, 50000)
-setTimeout(() => {
-    window.location.assign('index.html')
-}, 55000)
+
 
 startGame();
 

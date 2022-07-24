@@ -10,7 +10,7 @@ score_int.innerHTML = score_storage
 name.innerHTML = `${name_storage} your score is: `;
 console.log(score_storage)
 if (MIN_SCORE >= score_storage) {
-    score_msg.innerHTML = `Sorry ${name_storage} your score is below average`
+    score_msg.innerHTML = `Try Again`
 } else {
-    score_msg.innerHTML = `Well done ${name_storage}`
+    score_msg.innerHTML = `Well done`
 }

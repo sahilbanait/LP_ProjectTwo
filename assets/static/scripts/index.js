@@ -158,10 +158,10 @@ let startTimer = () => {
         setTimeout(() => {
             alert.style.display = 'Block'
             isPaused = true
-        }, 50000)
+        }, 500000)
         setTimeout(() => {
             window.location.assign('index.html')
-        }, 55000)
+        }, 550000)
     }
 }
 

@@ -17,6 +17,7 @@
     --baby-blue-eyes: rgba(144, 20, 193, 0.95);
     --transition: 0.2s ease-in;
     --monospace: 'JetBrains Mono', monospace;
+    --ratio: 3.74;
 }
 
 /* resets */
@@ -53,6 +54,7 @@ body {
     cursor: default !important;
     pointer-events: none;
 }
+
 
 /* navbar */
 nav ul {

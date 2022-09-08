@@ -13,6 +13,12 @@ const submitBtn = document.querySelector('#name-button');
 let errMsg = document.querySelector('#error-meesage');
 const submitForm = document.querySelector('#submitForm');
 const alert = document.querySelector('.alert')
+const dialog = document.querySelector('#instructions-dialog');
+
+const showInstructionDialog = () => {
+    dialog.showModal();
+    console.log("Clicked")
+};
 
 
 const validationForm = () => {
@@ -141,7 +147,7 @@ let quizQuestions = [
 
 ]
 
-questionTotal.innerHTML = quizQuestions.length;
+questionTotal.innerHTML = quizQuestions.length.toString();
 const SCORE_POINTS = 100
 const MAX_QUESTION = 10
 let MAX_TIME = 5

@@ -5,20 +5,25 @@ const currentQuestionNumber = document.querySelector('#current_question');
 const progressBar = document.querySelector('#progressFull');
 const scoretext = document.querySelector('#score');
 let countDownTime = document.querySelector('#timeLeft');
-let scoreInt = document.querySelector('#score-int');
-let option = document.getElementsByClassName('option')
-const mainSection = document.querySelector('main');
-const homePageSection = document.querySelector('#game-section');
-const submitBtn = document.querySelector('#name-button');
-let errMsg = document.querySelector('#error-meesage');
+// let scoreInt = document.querySelector('#score-int');
+// let option = document.getElementsByClassName('option')
+// const mainSection = document.querySelector('main');
+// const homePageSection = document.querySelector('#game-section');
+// const submitBtn = document.querySelector('#name-button');
+// let errMsg = document.querySelector('#error-meesage');
 const submitForm = document.querySelector('#submitForm');
 const alert = document.querySelector('.alert')
-const dialog = document.querySelector('#instructions-dialog');
+const dialogButton = document.querySelector('#instructionDialogButton');
+const dialog = document.querySelector('#instructionDialog');
 
-const showInstructionDialog = () => {
+
+const onDialogButtonClick = () => {
     dialog.showModal();
     console.log("Clicked")
-};
+}
+const onCloseDialog = () => {
+    dialog.close()
+}
 
 
 const validationForm = () => {
@@ -219,19 +224,20 @@ choices.forEach(choice => {
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset['number'];
         console.log(selectedAnswer)
-        let applyClass = 'Incorrect'
+        let applyClass = '.incorrect'
+
 
         if (selectedAnswer == currentQuestion.answer) {
-            applyClass = 'Correct'
-        }
-        if (applyClass === 'Correct') {
             incrementScore(SCORE_POINTS)
+            applyClass = '.correct'
         }
-        selectedChoice.parentElement.classList.add(applyClass);
-
+        selectedChoice.classList.add(applyClass);
+        console.log(applyClass)
 
         setTimeout(() => {
-            selectedChoice.parentElement.classList.remove(applyClass);
+
+            selectedChoice.classList.remove(applyClass);
+            console.log(applyClass)
             populateNewQuestion();
 
         })

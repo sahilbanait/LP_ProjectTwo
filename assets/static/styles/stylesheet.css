@@ -13,7 +13,7 @@
     --blizzard-blue: #ade8f4ff;
     --light-cyan: #caf0f8ff;
     --green-progressBar: #01648a;
-    --green-separator: #2BD6AD;
+    --green-separator: #033529;
     --baby-blue-eyes: rgba(144, 20, 193, 0.95);
     --transition: 0.2s ease-in;
     --monospace: 'JetBrains Mono', monospace;
@@ -24,7 +24,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Nova Square', cursive;
+    font-family: "JetBrains Mono", monospace
 
 }
 
@@ -110,6 +110,17 @@ nav ul a:hover {
 
 }
 
+dialog::backdrop {
+    background: repeating-linear-gradient(
+            30deg,
+            rgba(24, 194, 236, 0.2),
+            rgba(24, 194, 236, 0.2) 1px,
+            rgba(24, 194, 236, 0.3) 1px,
+            rgba(24, 194, 236, 0.3) 20px
+    );
+    backdrop-filter: blur(1px)
+}
+
 .gradient-separator {
     height: 7px;
     background-color: var(--green-progressBar);
@@ -142,7 +153,7 @@ nav ul a:hover {
 /* progressBar */
 #progressBar {
     border: 0.2rem solid var(--green-separator);
-    height: 15px;
+    height: 20px;
     border-radius: 50px;
     width: 100%;
     overflow: hidden;
@@ -361,7 +372,8 @@ nav ul a:hover {
 
 .option:hover {
     cursor: pointer;
-    color: whitesmoke;
+    color: black;
+    background-color: var(--sky-blue-crayola);
     transform: scale(1.02);
 
 }

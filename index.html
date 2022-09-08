@@ -28,36 +28,22 @@
     <nav role="navigation">
         <div id="nav-items-container">
             <ul>
-                <li id="navItem-one"><a class="btn-disabled" disabled="disabled" href="index.html"><h1>Quiz</h1></a>
+                <li id="navItem-one"><a href="index.html"><i class="fa-solid fa-atom"></i></a>
                 </li>
                 <li id="navItem-two"><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
                 <li id="navItem-three">
-                    <a class="btn btn-primary" data-bs-target="#exampleModal" data-bs-toggle="modal" href="#"
-                       type="button">
-                        <div aria-hidden="false" aria-labelledby="instructionDialog" class="modal fade"
-                             id="exampleModal"
-                             tabindex="-1">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="instructionDialog">Instructions</h5>
-                                        <button aria-label="Close" class="btn-close" data-bs-dismiss="modal"
-                                                type="button">
+                    <a href="#" id="instructionDialogButton" onclick="onDialogButtonClick()">
+                        <dialog id="instructionDialog">
+                            <div>
+                                <p> Instructions </p>
+                                <button onclick="onCloseDialog()">Close Me!</button>
 
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        ...
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button class="btn btn-secondary" data-bs-dismiss="modal" type="button">Close
-                                        </button>
-                                        <button class="btn btn-primary" type="button">Save changes</button>
-                                    </div>
-                                </div>
                             </div>
-                        </div>
-                        <i class="fa-solid fa-circle-question"></i>
+
+
+                        </dialog>
+
+                        <i class="fa-solid fa-circle-info"></i>
                     </a>
                 </li>
             </ul>

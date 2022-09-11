@@ -375,7 +375,6 @@ dialog::backdrop {
     color: black;
     background-color: var(--sky-blue-crayola);
     transform: scale(1.02);
-
 }
 
 #a, #b, #c, #d {
@@ -597,9 +596,26 @@ footer {
         font-size: 10px;
     }
 
+
     .option:hover {
         cursor: pointer;
         color: var(--star-command-blue);
+        background-color: var(--uranian-blue);
+        transform: scale(1.02);
+    }
+
+    #game-card h1 {
+        padding: 10px;
+        font-size: 20px;
+    }
+
+    #instructions-container {
+        padding: 10px;
+    }
+
+    #instructions-container ul li {
+        font-size: 16px;
+        padding: 0;
     }
 
 

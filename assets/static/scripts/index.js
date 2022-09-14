@@ -222,25 +222,33 @@ choices.forEach(choice => {
         if (!acceptingAnswer) return;
         acceptingAnswer = false;
         const selectedChoice = e.target;
+        console.log(e.target)
         const selectedAnswer = selectedChoice.dataset['number'];
-        console.log(selectedAnswer)
         let applyClass = '.incorrect'
-
 
         if (selectedAnswer == currentQuestion.answer) {
             incrementScore(SCORE_POINTS)
             applyClass = '.correct'
+            selectedChoice.classList.toggle('correct')
+            setTimeout(() => {
+                if (applyClass == '.correct') {
+                    selectedChoice.classList.remove('correct')
+                }
+
+            }, 150);
+
+
+            console.log(applyClass)
         }
-        selectedChoice.classList.add(applyClass);
-        console.log(applyClass)
+
 
         setTimeout(() => {
 
+
             selectedChoice.classList.remove(applyClass);
-            console.log(applyClass)
             populateNewQuestion();
 
-        })
+        }, 200)
 
 
     })

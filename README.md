@@ -1,6 +1,7 @@
 # Quiz App - Project two
 
 This is a quiz app. The context of the quiz is based on Cloud computing
+***
 
 ## Technologies used
 
@@ -11,14 +12,35 @@ This is a quiz app. The context of the quiz is based on Cloud computing
 * #### [Javascript]()
     * The project used Vanilla Javascript in order to add functionality to the app
 * #### [Font Awesome]()
-    * The project used Font Awesome for the nav bar element and footer elements
+  * The project used Font Awesome for the nav bar element and footer elements
 * #### [Webstorm,Intelli J]()
-    * I have used Webstorm and Intelli J IDE to write the project code
+  * I have used Webstorm and Intelli J IDE to write the project code
 * #### [Git]()
-    * I have used Git as a version control system to regularly add and commit changes made to project in Webstorm,
-      before pushing them to GitHub
+  * I have used Git as a version control system to regularly add and commit changes made to project in Webstorm,
+    before pushing them to GitHub
 * #### [Github]()
-    * GitHub to store the committed changes made into the project and also to deploy the app in live environment
+  * GitHub to store the committed changes made into the project and also to deploy the app in live environment
+
+***
+
+## Features
+
+All the pages are incorporated with Navigation and Footer
+
+* Navigation-There are three button in navigation bar.
+  * Logo- Upon clicking on this button user will be redirected to the landing page
+  * Home- This button have same functionality as Logo button
+  * Help- User is provided some instructions on how to use the quiz and pause or quit the quiz if they need too.
+
+#### Landing Page
+
+*
+
+#### Quiz Page
+
+#### End Page
+
+***
 
 ## Deployment
 

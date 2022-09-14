@@ -356,21 +356,20 @@ dialog::backdrop {
     flex-flow: column;
 }
 
-.option {
-    flex: 1;
-    color: var(--star-command-blue);
+.choice-text {
+    flex: 5;
+    color: var(--bs-black);
     font-weight: bold;
     border-radius: 10px;
     text-align: center;
     border: 1px solid gray;
     display: flex;
-    background-color: var(--uranian-blue);
     flex-flow: row;
     align-items: center;
     justify-content: center;
 }
 
-.option:hover {
+.choice-text:hover {
     cursor: pointer;
     color: black;
     background-color: var(--sky-blue-crayola);
@@ -573,7 +572,16 @@ footer {
     font-size: 20px;
 }
 
-@media screen and (max-width: 568px) {
+@media (min-width:320px) and (max-width: 768px) {
+
+    .correct {
+        background-color: rgba(11, 223, 36);
+    }
+
+    .incorrect {
+        background-color: rgba(230, 29, 29, 1);
+    }
+
     html, body {
         overflow: scroll;
         width: 100%;
@@ -596,12 +604,13 @@ footer {
     #timeAndScore {
         font-size: 10px;
     }
-
-
-    .option:hover {
+    .choice-text{
+        background-color: snow;
+    }
+    .choice-text:hover {
         cursor: pointer;
-        color: var(--star-command-blue);
-        background-color: var(--uranian-blue);
+        color: var(--bs-black-rgb);
+        background-color: snow;
         transform: scale(1.02);
     }
 

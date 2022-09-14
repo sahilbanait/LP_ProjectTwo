@@ -5,20 +5,15 @@ const currentQuestionNumber = document.querySelector('#current_question');
 const progressBar = document.querySelector('#progressFull');
 const scoretext = document.querySelector('#score');
 let countDownTime = document.querySelector('#timeLeft');
-// let scoreInt = document.querySelector('#score-int');
-// let option = document.getElementsByClassName('option')
-// const mainSection = document.querySelector('main');
-// const homePageSection = document.querySelector('#game-section');
-// const submitBtn = document.querySelector('#name-button');
-// let errMsg = document.querySelector('#error-meesage');
 const submitForm = document.querySelector('#submitForm');
 const alert = document.querySelector('.alert')
 const dialogButton = document.querySelector('#instructionDialogButton');
 const dialog = document.querySelector('#instructionDialog');
+let div = document.createElement('div').classList.toggle('game-card');
 
 
 const onDialogButtonClick = () => {
-    dialog.showModal();
+    div.show()
     console.log("Clicked")
 }
 const onCloseDialog = () => {
@@ -158,6 +153,10 @@ const MAX_QUESTION = 10
 let MAX_TIME = 5
 let timeLeft = MAX_TIME * 60;
 
+/*
+    Timer start function
+ */
+
 let startTimer = () => {
     const min = Math.floor(timeLeft / 60);
     let sec = timeLeft % 60;
@@ -172,14 +171,19 @@ let startTimer = () => {
         }, 500000)
         setTimeout(() => {
             window.location.assign('index.html')
-        }, 550000)
+        }, 505000)
     }
 }
-
+/*
+    Pause timer function
+ */
 const pauseTimer = () => {
     isPaused = !isPaused
 }
 
+/*
+    Game starting function
+ */
 startGame = () => {
     startTimer();
     questionCounter = 0;
@@ -190,6 +194,9 @@ startGame = () => {
     setInterval(startTimer, 1000);
 
 }
+/*
+    Populate new questions
+ */
 populateNewQuestion = () => {
 
     if (availableQuestion.length === 0 || questionCounter > MAX_QUESTION) {
@@ -224,33 +231,23 @@ choices.forEach(choice => {
         const selectedChoice = e.target;
         console.log(e.target)
         const selectedAnswer = selectedChoice.dataset['number'];
-        let applyClass = '.incorrect'
-
+        let applyClass;
         if (selectedAnswer == currentQuestion.answer) {
             incrementScore(SCORE_POINTS)
-            applyClass = '.correct'
-            selectedChoice.classList.toggle('correct')
-            setTimeout(() => {
-                if (applyClass == '.correct') {
-                    selectedChoice.classList.remove('correct')
-                }
-
-            }, 150);
-
-
-            console.log(applyClass)
+            applyClass = 'correct'
+        }else {
+            applyClass = 'incorrect'
         }
 
+        selectedChoice.classList.toggle(applyClass)
 
         setTimeout(() => {
-
-
-            selectedChoice.classList.remove(applyClass);
+            setTimeout(()=>{
+                selectedChoice.classList.remove(applyClass);
+                },100
+            )
             populateNewQuestion();
-
-        }, 200)
-
-
+        },300 )
     })
 })
 

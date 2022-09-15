@@ -1,6 +1,7 @@
 # Quiz App - Project two
 
-This is a quiz app. The context of the quiz is based on Cloud computing
+This is a quiz app and context of the quiz is based on Cloud computing. </br>
+Anyone with general knowledge of cloud computing can take this quiz
 ***
 
 ## Technologies used
@@ -34,11 +35,20 @@ All the pages are incorporated with Navigation and Footer
 
 #### Landing Page
 
-*
+* Some instruction is provided related to the quiz
+* User needs to enter their name in order to proceed
 
 #### Quiz Page
 
+* Progress bar
+* Timer
+* Total Question
+* Option
+
 #### End Page
+
+* Name and Total score is shown on this page
+* User can take the quiz as many times as they want by click on **Retry** button
 
 ***
 

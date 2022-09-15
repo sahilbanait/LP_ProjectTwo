@@ -204,11 +204,32 @@ dialog::backdrop {
     align-items: center;
 }
 
+.game-card {
+    height: 100%;
+    padding: 20px;
+    display: inline-flex;
+    align-self: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 #name-button {
     color: black;
     background-color: #2BD6AD;
     height: fit-content;
     padding: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.button {
+    color: black;
+    background-color: #2BD6AD;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
     text-decoration: none;
     font-size: 20px;
     border-radius: 10px;
@@ -362,7 +383,7 @@ dialog::backdrop {
     font-weight: bold;
     border-radius: 10px;
     text-align: center;
-    border: 1px solid gray;
+    border: 1px solid var(--sky-blue-crayola);
     display: flex;
     flex-flow: row;
     align-items: center;
@@ -372,8 +393,7 @@ dialog::backdrop {
 .choice-text:hover {
     cursor: pointer;
     color: black;
-    background-color: var(--sky-blue-crayola);
-    transform: scale(1.02);
+    transform: scale(1.20);
 }
 
 #a, #b, #c, #d {
@@ -559,6 +579,16 @@ footer {
 }
 
 /*
+    Instruction dialog style
+*/
+.dialog-box {
+    position: absolute;
+    top: 100px;
+    width: 500px;
+    left: 100px;
+}
+
+/*
     End page style
 
 */
@@ -572,7 +602,8 @@ footer {
     font-size: 20px;
 }
 
-@media (min-width:320px) and (max-width: 768px) {
+
+@media (min-width: 320px) and (max-width: 768px) {
 
     .correct {
         background-color: rgba(11, 223, 36);
@@ -604,13 +635,9 @@ footer {
     #timeAndScore {
         font-size: 10px;
     }
-    .choice-text{
-        background-color: snow;
-    }
+
     .choice-text:hover {
         cursor: pointer;
-        color: var(--bs-black-rgb);
-        background-color: snow;
         transform: scale(1.02);
     }
 

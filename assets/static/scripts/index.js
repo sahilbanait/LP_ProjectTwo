@@ -7,14 +7,35 @@ const scoretext = document.querySelector('#score');
 let countDownTime = document.querySelector('#timeLeft');
 const submitForm = document.querySelector('#submitForm');
 const alert = document.querySelector('.alert')
-const dialogButton = document.querySelector('#instructionDialogButton');
-const dialog = document.querySelector('#instructionDialog');
-let div = document.createElement('div').classList.toggle('game-card');
+
 
 
 const onDialogButtonClick = () => {
-    div.show()
-    console.log("Clicked")
+    let dialog = document.createElement('dialog')
+    let container = document.createElement('div');
+    let div = document.createElement('div')
+    dialog.classList.add("dialog-box");
+    div.classList.add("instructions")
+    let close = document.createElement("button")
+    close.classList.add('button')
+    close.addEventListener("click", function () {
+        this.closest("dialog").close()
+    })
+    close.innerHTML = "<i class=\"fa-regular fa-circle-xmark\"></i>"
+    div.innerHTML = '<ul>\n' +
+        '                        <li>Total 10 Question</li>\n' +
+        '                        <li>Tap on options to select the correct answers</li>\n' +
+        '                        <li>Total allocated time 5 minutes</li>\n' +
+        '                        <li>Pause the time if you need a break</li>\n' +
+        '                        <li>Click on <i class="fa-solid fa-house"></i> home button to quit the quiz  </li>\n' +
+        '                    </ul>'
+    container.append(div)
+    container.classList.add('game-card')
+    dialog.appendChild(close)
+    dialog.appendChild(div)
+    document.body.appendChild(dialog);
+    dialog.showModal();
+
 }
 const onCloseDialog = () => {
     dialog.close()
@@ -235,19 +256,19 @@ choices.forEach(choice => {
         if (selectedAnswer == currentQuestion.answer) {
             incrementScore(SCORE_POINTS)
             applyClass = 'correct'
-        }else {
+        } else {
             applyClass = 'incorrect'
         }
 
         selectedChoice.classList.toggle(applyClass)
 
         setTimeout(() => {
-            setTimeout(()=>{
-                selectedChoice.classList.remove(applyClass);
-                },100
+            setTimeout(() => {
+                    selectedChoice.classList.remove(applyClass);
+                }, 100
             )
             populateNewQuestion();
-        },300 )
+        }, 300)
     })
 })
 

@@ -9,13 +9,15 @@ const submitForm = document.querySelector('#submitForm');
 const alert = document.querySelector('.alert')
 
 
-
+/*
+ *  Dialog button Handler
+ */
 const onDialogButtonClick = () => {
     let dialog = document.createElement('dialog')
     let container = document.createElement('div');
     let div = document.createElement('div')
     dialog.classList.add("dialog-box");
-    div.classList.add("instructions")
+    div.classList.add("instructions-container")
     let close = document.createElement("button")
     close.classList.add('button')
     close.addEventListener("click", function () {
@@ -36,9 +38,6 @@ const onDialogButtonClick = () => {
     document.body.appendChild(dialog);
     dialog.showModal();
 
-}
-const onCloseDialog = () => {
-    dialog.close()
 }
 
 

@@ -27,13 +27,18 @@
                 <li id="navItem-one"><a href="index.html"><i class="fa-solid fa-atom"></i></a>
                 </li>
                 <li id="navItem-two"><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
-                <li id="navItem-three"><a href="#"><i class="fa-solid fa-circle-question"></i></a></li>
+                <li id="navItem-three">
+                    <a href="#" id="instructionDialogButton" onclick="onDialogButtonClick()"><i
+                            class="fa-solid fa-circle-info"></i>
+                    </a>
+                </li>
             </ul>
         </div>
 
     </nav>
     <div class="alert">
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <span class="closebtn" onclick="this.parentElement.style.display='none';"><i
+                class="fa-regular fa-circle-xmark"></i></span>
         <strong>Timeout !</strong> Please try again.
     </div>
 
@@ -70,20 +75,20 @@
         <section id="option-section">
             <div id="optionContainer">
 
-                    <!--                 <div class="separator"></div> -->
-                    <div class="choice-text " data-number="1">Dynamic binding</div>
+                <!--                 <div class="separator"></div> -->
+                <div class="choice-text " data-number="1">Dynamic binding</div>
 
 
-                    <!--                 <div class="separator"></div> -->
-                    <div class="choice-text" data-number="2">Dynamic allocation</div>
+                <!--                 <div class="separator"></div> -->
+                <div class="choice-text" data-number="2">Dynamic allocation</div>
 
 
-                    <!--                 <div class="separator"></div> -->
-                    <div class="choice-text" data-number="3">Static typing</div>
+                <!--                 <div class="separator"></div> -->
+                <div class="choice-text" data-number="3">Static typing</div>
 
 
-                    <!--                 <div class="separator"></div> -->
-                    <div class="choice-text" data-number="4">Static allocation</div>
+                <!--                 <div class="separator"></div> -->
+                <div class="choice-text" data-number="4">Static allocation</div>
 
             </div>
         </section>

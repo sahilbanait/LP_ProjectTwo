@@ -7,7 +7,7 @@ const scoretext = document.querySelector('#score');
 let countDownTime = document.querySelector('#timeLeft');
 const submitForm = document.querySelector('#submitForm');
 const alert = document.querySelector('.alert')
-
+let timerButton = document.getElementById('name-button')
 
 /*
  *  Dialog button Handler
@@ -24,13 +24,14 @@ const onDialogButtonClick = () => {
         this.closest("dialog").close()
     })
     close.innerHTML = "<i class=\"fa-regular fa-circle-xmark\"></i>"
-    div.innerHTML = '<ul>\n' +
+    div.innerHTML = '<div style="display: block; align-self: center; align-content: center; padding: 20px">' +
+        '           <ul id="nav-help" ">\n' +
         '                        <li>Total 10 Question</li>\n' +
         '                        <li>Tap on options to select the correct answers</li>\n' +
         '                        <li>Total allocated time 5 minutes</li>\n' +
         '                        <li>Pause the time if you need a break</li>\n' +
         '                        <li>Click on <i class="fa-solid fa-house"></i> home button to quit the quiz  </li>\n' +
-        '                    </ul>'
+        '                    </ul></div>'
     container.append(div)
     container.classList.add('game-card')
     dialog.appendChild(close)
@@ -188,10 +189,10 @@ let startTimer = () => {
         setTimeout(() => {
             alert.style.display = 'Block'
             isPaused = true
-        }, 500000)
+        }, 300000)
         setTimeout(() => {
             window.location.assign('index.html')
-        }, 505000)
+        }, 303000)
     }
 }
 /*
@@ -199,6 +200,13 @@ let startTimer = () => {
  */
 const pauseTimer = () => {
     isPaused = !isPaused
+    if (isPaused) {
+        timerButton.style.backgroundColor = 'red'
+    } else {
+        timerButton.style.backgroundColor = '#2BD6AD'
+    }
+
+
 }
 
 /*

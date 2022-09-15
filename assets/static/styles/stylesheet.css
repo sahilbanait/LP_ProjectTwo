@@ -80,7 +80,6 @@ nav {
     background-color: black;
     width: 100%;
     position: sticky;
-    padding: 10px 10px;
 
 
 }
@@ -96,7 +95,7 @@ nav ul li:nth-child(3) {
 }
 
 #nav-items-container {
-
+    padding: 10px;
 }
 
 #navItem-one, #navItem-two, #navItem-three {
@@ -108,6 +107,15 @@ nav ul a:hover {
     transition: 0.2s ease-in-out;
     transform: scale(1.02);
 
+}
+
+#nav-help {
+    list-style-type: circle;
+    padding: 5px
+}
+
+#nav-help li {
+    padding: 10px;
 }
 
 dialog::backdrop {
@@ -224,6 +232,10 @@ dialog::backdrop {
     border-radius: 10px;
 }
 
+#name-button:hover {
+    transform: scale(1.05);
+}
+
 .button {
     color: black;
     background-color: #2BD6AD;
@@ -231,8 +243,13 @@ dialog::backdrop {
     height: fit-content;
     padding: 5px;
     text-decoration: none;
-    font-size: 20px;
-    border-radius: 10px;
+    justify-self: center;
+    font-size: 15px;
+
+}
+
+.button:hover {
+    transform: scale(1.05);
 }
 
 #name-button:hover {
@@ -263,13 +280,12 @@ dialog::backdrop {
     border-radius: 10px;
     padding: 20px;
 
-
 }
 
 #instructions-container ul li {
     list-style-type: none;
     padding: 10px;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 #instructions-container ul li::before {
@@ -393,7 +409,7 @@ dialog::backdrop {
 .choice-text:hover {
     cursor: pointer;
     color: black;
-    transform: scale(1.20);
+    transform: scale(1.10);
 }
 
 #a, #b, #c, #d {
@@ -516,12 +532,7 @@ dialog::backdrop {
 
 }
 
-#retry-btn-container
-ol, ul {
-    padding-left: 0;
-    margin-bottom: 0;
 
-}
 
 /* footer */
 footer {
@@ -629,6 +640,12 @@ footer {
         font-size: 30px;
     }
 
+    .dialog-box {
+        position: absolute;
+        left: 0;
+        margin: 0 auto;
+    }
+
     ol, ul {
         padding-left: 0;
     }
@@ -647,9 +664,6 @@ footer {
         font-size: 20px;
     }
 
-    #instructions-container {
-        padding: 10px;
-    }
 
     #instructions-container ul li {
         font-size: 16px;
